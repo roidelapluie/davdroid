@@ -91,12 +91,16 @@ public class DavProp {
 	public static class DavPropAddressbookDescription {
 		@Text(required=false)
 		@Getter private String description;
+        @Attribute(name="lang",required=false)
+        String lang;
 	}
 	
 	@Namespace(prefix="C",reference="urn:ietf:params:xml:ns:caldav")
 	public static class DavPropCalendarDescription {
 		@Text(required=false)
 		@Getter private String description;
+        @Attribute(name="lang",required=false)
+        String lang;
 	}
 	
 	@Namespace(prefix="CS",reference="http://calendarserver.org/ns/")
@@ -120,5 +124,6 @@ public class DavProp {
 	public static class DavPropCalendarData {
 		@Text(required=false)
 		@Getter String ical;
+        
 	}
 }
