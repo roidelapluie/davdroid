@@ -10,9 +10,11 @@ package at.bitfire.davdroid.webdav;
 import lombok.Getter;
 
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 import org.simpleframework.xml.Text;
+import java.lang.String;
 
 @Namespace(prefix="D",reference="DAV:")
 @Root(strict=false)
@@ -124,6 +126,5 @@ public class DavProp {
 	public static class DavPropCalendarData {
 		@Text(required=false)
 		@Getter String ical;
-        
 	}
 }
